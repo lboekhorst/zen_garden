@@ -12,7 +12,9 @@ defmodule ZenGarden.MixProject do
       elixir: "~> 1.7",
       elixirc_options: [warnings_as_errors: true],
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      description: "Transform your test suite into a beautiful zen garden",
+      package: package()
     ]
   end
 
@@ -29,6 +31,14 @@ defmodule ZenGarden.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       # {:sibling_app_in_umbrella, in_umbrella: true}
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Laurens Boekhorst"],
+      licenses: ["MIT"],
+      links: %{github: "https://github.com/lboekhorst/zen_garden"}
     ]
   end
 end
